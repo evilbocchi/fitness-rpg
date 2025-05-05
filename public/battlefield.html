@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="styles/style.css" rel="stylesheet">
+
+    <link rel="icon" href="assets/mini-logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <title>Fitness Quest</title>
+</head>
+
+<body class="d-flex flex-column bg-dark text-white">
+    <nav class="navbar"></nav>
+    <div id="navbar-margin"></div>
+
+    <img src="assets/game/battlefield.jpg" alt="Background" class="game-background">
+
+    <div class="my-3 text-white text-center location-container">
+        <p class="mb-0 p-1 lead fw-bold">Location: Battlefield</p>
+    </div>
+
+    <main class="container my-5 mx-auto position-relative d-flex flex-column">
+        <a class="lead text-light text-decoration-none mb-4 home-teleport"><i class="bi bi-arrow-return-left"></i> Back
+            to Home</a>
+
+        <div class="row" id="fighters">
+            <div class="col">
+
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+
+        <div class="battle-options-container">
+            <div class="status-window status-window-purple px-5 py-3">
+                <div class="background"></div>
+                <div class="text-center" id="result"></div>
+                <p class="fw-bold text-center h3" id="action-title"></p>
+                <div class="action-options row justify-content-center d-none" id="main-options">
+                    <button class="col battle-option" id="fight">Fight</button>
+                    <button class="col battle-option" id="guard">Guard</button>
+                    <button class="col battle-option" id="heal">Heal</button>
+                    <button class="col battle-option" id="forfeit">Forfeit</button>
+                </div>
+                <div class="action-options d-none" id="skill-options">
+                    <button class="battle-option-secondary back-main"><i class="bi bi-arrow-return-left"></i>
+                        Back</button>
+
+                    <div class="row justify-content-center align-items-stretch">
+                        <button class="col-auto battle-option px-3 flex-shrink-0 left-nav">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <div class="col d-flex justify-content-start align-items-stretch gap-4 flex-shrink-0 overflow-hidden mx-2"
+                            id="skill-list"></div>
+                        <button class="col-auto battle-option px-3 flex-shrink-0 right-nav">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="action-options d-none" id="heal-options">
+                    <button class="battle-option-secondary back-main"><i class="bi bi-arrow-return-left"></i>
+                        Back</button>
+
+                    <div class="row justify-content-center align-items-stretch">
+                        <button class="col-auto battle-option px-3 flex-shrink-0 left-nav">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <div class="col d-flex justify-content-start align-items-stretch gap-4 flex-shrink-0 overflow-hidden mx-2"
+                            id="heal-list"></div>
+                        <button class="col-auto battle-option px-3 flex-shrink-0 right-nav">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="action-options d-none" id="waiting">
+                    <p class="text-center lead m-0 text-white-50">Waiting for opponent.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="flex-grow-1 w-100"></div>
+    <div id="toast-container" class="position-fixed bottom-0 end-0 p-3"></div>
+    <footer id="footer"></footer>
+
+    <script src="scripts/components/battlefield.js" type="module"></script>
+    <script src="scripts/components/navbar.js" type="module"></script>
+    <script src="scripts/components/footer.js" type="module"></script>
+</body>
+
+</html>

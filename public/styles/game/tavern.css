@@ -1,0 +1,14 @@
+.tavern-option {
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#search {
+    font-size: 1.2rem;
+}
+
+#search::placeholder {
+    color: #cecece;
+}

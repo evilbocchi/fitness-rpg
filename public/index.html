@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="styles/style.css" rel="stylesheet">
+
+    <link rel="icon" href="assets/mini-logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <title>Fitness Quest</title>
+</head>
+
+<body class="d-flex flex-column">
+    <!-- to be loaded -->
+    <nav class="navbar"></nav>
+
+    <!-- separate content from header for visibility -->
+    <div id="navbar-margin"></div>
+
+    <main id="hero" class="w-100 mb-3 px-3 py-5 position-relative">
+        <div class="background"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <h1 id="hero-title" class="col text-center display-4 fw-bolder drop-shadow my-auto">Let's make <span
+                        class="text-vanusa hover-text-rainbow" data-text="exercising">exercising</span>
+                    fun together.</h1>
+                <img id="hero-logo" class="col-auto object-fit-contain" src="assets/logo.png" alt="Fitness Quest">
+            </div>
+            <div class="mt-5 row justify-content-center gap-4 auth-options">
+                <a href="/register.html"
+                    class="col-md-auto btn btn-primary btn-lg border border-dark fw-bolder emphasised">Sign Up</a>
+                <a href="/login.html"
+                    class="col-md-auto btn btn-secondary btn-lg border border-dark fw-bolder emphasised">Login</a>
+            </div>
+        </div>
+    </main>
+
+    <div class="container my-3">
+        <h2 class="fw-bold">Popular Challenges</h2>
+        <div class="container mt-3 row justify-content-center align-items-stretch">
+            <button class="col-auto btn btn-light left-nav">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            <div
+                class="col popular challenge-list">
+            </div>
+            <button class="col-auto btn btn-light right-nav">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="container my-3">
+        <h2 class="fw-bold">Top Rated Challenges</h2>
+        <div class="container mt-3 row justify-content-center align-items-stretch">
+            <button class="col-auto btn btn-light left-nav">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            <div
+                class="col top-rated challenge-list">
+            </div>
+            <button class="col-auto btn btn-light right-nav">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="container my-3">
+        <h2 class="fw-bold">Newest Challenges</h2>
+        <div class="container mt-3 row justify-content-center align-items-stretch">
+            <button class="col-auto btn btn-light left-nav">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            <div
+                class="col newest challenge-list">
+            </div>
+            <button class="col-auto btn btn-light right-nav">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="flex-grow-1 w-100"></div>
+    <div id="toast-container" class="position-fixed bottom-0 end-0 p-3"></div>
+    <div id="footer"></div>
+
+    <script src="scripts/components/navbar.js" type="module"></script>
+    <script src="scripts/components/footer.js" type="module"></script>
+    <script src="scripts/components/hero.js" type="module"></script>
+    <script src="scripts/components/challenge/challengeList.js" type="module"></script>
+</body>
+
+</html>

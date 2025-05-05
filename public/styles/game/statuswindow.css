@@ -1,0 +1,122 @@
+:root {
+    --notch-width: 20px;
+    --path: polygon(0 var(--notch-width),
+            var(--notch-width) 0,
+            calc(100% - var(--notch-width)) 0,
+            100% var(--notch-width),
+            100% calc(100% - var(--notch-width)),
+            calc(100% - var(--notch-width)) 100%,
+            var(--notch-width) 100%,
+            0% calc(100% - var(--notch-width)));
+}
+
+.status-window {
+    position: relative;
+}
+
+.status-window .background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0.4;
+
+    --border-color: #f0f0f0;
+    filter: 
+    drop-shadow(0 2px 0 var(--border-color))
+    drop-shadow(0 -2px 0 var(--border-color))
+    drop-shadow(2px 0 0 var(--border-color))
+    drop-shadow(-2px 0 0 var(--border-color))
+    drop-shadow(0 0 6px #000);
+}
+
+.status-window .background::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    clip-path: var(--path);
+
+    --status-window-color: rgba(50, 149, 241);
+    --status-window-shade: rgb(16, 60, 255);
+
+    background-image: var(--status-window-image);
+    background-color: var(--status-window-color);
+    box-shadow: inset 0 0 60px var(--status-window-shade);
+}
+
+/* meant to make coloured text easier to see on status windows */
+.text-clearer {
+    filter: brightness(2) saturate(2) drop-shadow(0 0 6px rgba(0, 0, 0, 0.8));
+}
+
+.status-window-purple .background::before {
+    --status-window-color: rgb(255, 34, 207) !important;
+    --status-window-shade: rgb(124, 0, 124) !important;
+}
+
+.status-window-red .background::before {
+    --status-window-color: rgb(255, 34, 34) !important;
+    --status-window-shade: rgb(124, 0, 0) !important;
+}
+
+.status-window-yellow .background::before {
+    --status-window-color: rgb(233, 255, 108) !important;
+    --status-window-shade: rgb(124, 85, 0) !important;
+}
+
+.status-window-kyoto .background::before {
+    --status-window-color: #c21500;
+    --status-window-shade: #ffc500;
+}
+
+.status-window-clear-sky .background::before {
+    --status-window-color: #005C97;
+    --status-window-shade: #363795;
+}
+
+.status-window-love-and-liberty .background::before {
+    --status-window-color: #200122;
+    --status-window-shade: #6f0000;
+}
+
+.status-window-steel-gray .background::before {
+    --status-window-color: #1F1C2C;
+    --status-window-shade: #928DAB;
+}
+
+.status-window-azure-pop .background::before {
+    --status-window-color: #ef32d9;
+    --status-window-shade: #89fffd;
+}
+
+.status-window-celestial .background::before {
+    --status-window-color: #C33764;
+    --status-window-shade: #1D2671;
+}
+
+.status-window-common .background::before {
+    --status-window-color: var(--common-color);
+    --status-window-shade: rgba(0, 0, 0, 0.5);
+}
+
+.status-window-rare .background::before {
+    --status-window-color: var(--rare-color);
+    --status-window-shade: rgba(0, 0, 0, 0.5);
+}
+
+.status-window-epic .background::before {
+    --status-window-color: var(--epic-color);
+    --status-window-shade: rgba(0, 0, 0, 0.5);
+}
+
+.status-window-legendary .background::before {
+    --status-window-color: var(--legendary-color);
+    --status-window-shade: rgba(0, 0, 0, 0.5);
+}

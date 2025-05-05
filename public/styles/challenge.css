@@ -1,0 +1,50 @@
+.challenge-list,
+.record-list,
+.review-list {
+    display: flex;
+    justify-content: start;
+    align-items: stretch;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.challenge-list {
+    gap: 1.5rem;
+}
+
+.record-list,
+.review-list {
+    gap: 0.75rem;
+}
+
+.challenge-card {
+    width: 250px;
+    max-height: 200px;
+    transition: 0.5s;
+}
+
+.review-card {
+    max-width: 300px;
+    max-height: 200px;
+}
+
+.record-card {
+    max-width: 250px;
+    max-height: 150px;
+}
+
+.challenge-card:hover {
+    border-color: black;
+}
+
+.left-nav,
+.right-nav {
+    border: 1px solid black;
+    padding: 0 1rem;
+    flex-shrink: 0;
+}
+
+.left-nav:hover,
+.right-nav:hover {
+    border-color: black;
+}

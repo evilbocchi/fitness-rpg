@@ -1,0 +1,16 @@
+.dungeon-option {
+    backdrop-filter: blur(10px);
+}
+
+.dungeon-option:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+}
+
+.dungeon-option .background::before {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}

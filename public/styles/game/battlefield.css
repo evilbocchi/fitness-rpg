@@ -1,0 +1,57 @@
+.battle-option {
+    color: white;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+}
+
+.battle-option-secondary {
+    color: rgb(209, 209, 209);
+    border: none;
+    background: none;
+    font-size: 1.25rem;
+}
+
+.battle-option:hover, .battle-option-secondary:hover {
+    color: yellow;
+}
+
+.battle-option:active {
+    filter: brightness(1.5);
+}
+
+.battle-options-container {
+    position: fixed;
+
+    left: 50%;
+    bottom: 8rem;
+    transform: translateX(-50%);
+    width: 80%;
+}
+
+.skill-option {
+    font-size: 1.5rem;
+    filter: brightness(1.6) saturate(1.6) drop-shadow(0 0 6px rgba(0, 0, 0, 0.8));
+    border: none;
+}
+
+.skill-option:hover {
+    filter: brightness(2) saturate(2) drop-shadow(0 0 6px #000);
+}
+
+.fighter-info {
+    width: calc(100% - 4rem);
+    color: white;
+    padding: 0 1rem;
+    text-shadow: 0 0 10px black;
+}
+
+.fighter-image {
+    width: 256px;
+    height: 256px;
+    object-fit: cover;
+}
+
+.second-person-container .fighter-image {
+    transform: scaleX(-1);
+}

@@ -1,0 +1,233 @@
+:root {
+    --gradient-alive: linear-gradient(#CB356B, #BD3F32);
+    --gradient-vanusa: linear-gradient(#89216B, #DA4453);
+    --gradient-sin-city-red: linear-gradient(#93291E, #ED213A);
+    --gradient-skillpoint: linear-gradient(90deg, rgb(140, 50, 225), rgb(75, 0, 225), rgb(225, 50, 140), rgb(225, 75, 205));
+    --gradient-experience: linear-gradient(90deg, rgb(100, 100, 255), rgb(0, 150, 255), rgb(50, 200, 255));
+    --gradient-health: linear-gradient(rgb(250, 80, 50), rgb(240, 46, 28));
+    --gradient-mana: linear-gradient(rgb(50, 110, 250), rgb(40, 70, 255));
+    --gradient-kyoto: linear-gradient(#c21500, #ffc500);
+    --gradient-clear-sky: linear-gradient(#005C97, #363795);
+    --gradient-love-and-liberty: linear-gradient(#200122, #6f0000);
+    --gradient-steel-gray: linear-gradient(#1F1C2C, #928DAB);
+    --gradient-azure-pop: linear-gradient(#ef32d9, #89fffd);
+    --gradient-celestial: linear-gradient(#C33764, #1D2671);
+}
+
+.hover-text-rainbow {
+    position: relative;
+    display: inline-block;
+}
+
+.hover-text-rainbow::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(100, 100, 255), rgb(0, 150, 255), rgb(0, 255, 0), rgb(255, 50, 150), rgb(100, 100, 255));
+    background-clip: text;
+    color: transparent;
+    opacity: 0;
+    transition: 0.25s;
+    animation: flashing_animation 10s ease-in-out infinite;
+    background-size: 500% 100%;
+}
+
+.hover-text-rainbow:hover::after {
+    opacity: 1;
+    transition: 0.25s;
+}
+
+.text-alive {
+    background: var(--gradient-alive);
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+.bg-alive {
+    background: var(--gradient-alive);
+}
+
+.text-vanusa {
+    background: var(--gradient-vanusa);
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+.bg-vanusa {
+    background: var(--gradient-vanusa);
+}
+
+.text-sin-city-red {
+    background: var(--gradient-sin-city-red) !important;
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+.bg-sin-city-red {
+    background: var(--gradient-sin-city-red);
+}
+
+.text-skillpoint {
+    background: var(--gradient-skillpoint);
+    background-clip: text !important;
+    color: transparent !important;
+    filter: drop-shadow(0 0 3px rgba(99, 0, 81, 0.2));
+    animation: flashing_animation 5s ease-in-out infinite;
+    background-size: 200% 100%;
+    pointer-events: none;
+}
+
+.bg-skillpoint {
+    background: var(--gradient-skillpoint);
+}
+
+.text-experience {
+    background: var(--gradient-experience);
+    background-clip: text !important;
+    color: transparent !important;
+    filter: drop-shadow(0 0 3px rgba(99, 0, 81, 0.2));
+    animation: flashing_animation 5s ease-in-out infinite;
+    background-size: 200% 100%;
+    pointer-events: none;
+}
+
+.bg-experience {
+    background: var(--gradient-experience);
+    animation: flashing_animation 5s ease-in-out infinite;
+    background-size: 200% 100%;
+}
+
+.text-health {
+    background: var(--gradient-health);
+    background-clip: text !important;
+    color: transparent !important;
+    pointer-events: none;
+}
+
+.bg-health {
+    background: var(--gradient-health);
+}
+
+.text-mana {
+    background: var(--gradient-mana);
+    background-clip: text !important;
+    color: transparent !important;
+    pointer-events: none;
+}
+
+.bg-mana {
+    background: var(--gradient-mana);
+}
+
+.text-kyoto {
+    background: var(--gradient-kyoto);
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+.bg-kyoto {
+    background: var(--gradient-kyoto);
+}
+
+.text-clear-sky {
+    background: var(--gradient-clear-sky);
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+.bg-clear-sky {
+    background: var(--gradient-clear-sky);
+}
+
+.text-love-and-liberty {
+    background: var(--gradient-love-and-liberty);
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+.bg-love-and-liberty {
+    background: var(--gradient-love-and-liberty);
+}
+
+.text-steel-gray {
+    background: var(--gradient-steel-gray);
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+.bg-steel-gray {
+    background: var(--gradient-steel-gray);
+}
+
+.text-azure-pop {
+    background: var(--gradient-azure-pop);
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+.bg-azure-pop {
+    background: var(--gradient-azure-pop);
+}
+
+.text-celestial {
+    background: var(--gradient-celestial);
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+.bg-celestial {
+    background: var(--gradient-celestial);
+}
+
+@keyframes flashing_animation {
+
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+/* card backdrops */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%) rotate(4deg);
+
+    border-radius: var(--bs-card-border-radius);
+    opacity: 0.2;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.card:hover::before {
+    opacity: 0.5;
+    filter: brightness(1.4);
+}
+
+.card:active::before {
+    opacity: 1;
+    filter: brightness(1.6);
+}
+
+.card-alive::before {
+    background: var(--gradient-alive);
+}
+
+.card-vanusa::before {
+    background: var(--gradient-vanusa);
+}
+
+.card-sin-city-red::before {
+    background: var(--gradient-sin-city-red);
+}
