@@ -4,8 +4,9 @@
     "description": "CA2 Backend Development",
     "main": "index.js",
     "scripts": {
-        "start": "node index.js",
-        "dev": "nodemon index.js",
+        "build": "",
+        "start": "node api/index.js",
+        "dev": "nodemon api/index.js",
         "test": "npm run init_tables && jest --forceExit",
         "init_tables": "node src/configs/initTables.js"
     },
